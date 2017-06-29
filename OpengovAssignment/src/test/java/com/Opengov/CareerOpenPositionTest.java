@@ -1,5 +1,12 @@
 package com.Opengov;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Timer;
 import java.util.concurrent.TimeUnit;
 import org.junit.After;
 import org.junit.Before;
@@ -12,6 +19,7 @@ public class CareerOpenPositionTest
 {
 	private WebDriver driver;
 	private String url="https://opengov.com/";
+	
 
 	@Before
 	public void setUp() throws Exception 
@@ -20,6 +28,7 @@ public class CareerOpenPositionTest
         driver=new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.manage().window().setSize(new Dimension(1650, 1680));
+        
 	}
 
 	@After
@@ -28,12 +37,27 @@ public class CareerOpenPositionTest
 	}
 
 	@Test
-	public void test() 
+	public void test() throws FileNotFoundException 
 	{
-		System.out.println("hello");
 		Homepage homepage=new Homepage(driver);
-		CareersPage careerspage=homepage.open(url).clickCompanyMenu().clickCareer();
+		CareersPage careerspage=homepage.open(url)
+										.clickCompanyMenu()
+										.clickCareer()
+										.clickViewOpenPosition()
+										.careerSearch().writingDocFile();
+		
+		
+		
 		
 	}
 
 }
+
+
+/****************
+ * public String getRegistrationMessage()
+	{
+		return registrationMessage.getText();
+	}
+	
+	***************************/
