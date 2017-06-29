@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class Homepage extends BasePageObject
 {
-	//Find homepage locators
+	//Find  locators under home page
 	@FindBy(xpath="//span[@class='navPrimary__hd'][contains(text(),'Company')]")
 	WebElement company;
 	@FindBy(xpath="//span[@class='navList__hd'][contains(text(),'Careers')]")

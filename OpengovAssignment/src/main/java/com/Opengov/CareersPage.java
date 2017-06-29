@@ -1,7 +1,5 @@
 package com.Opengov;
 
-
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -9,7 +7,6 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
@@ -98,7 +95,7 @@ public class CareersPage extends BasePageObject
 		pw.close();
 	}
 	
-	//for Asserting  "Redwood City"
+	//Getting search city name "Redwood City"
 	public String getcity()
 	{
 		Select selectcity=new Select(location);

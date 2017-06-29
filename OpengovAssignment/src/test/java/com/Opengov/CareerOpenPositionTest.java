@@ -1,12 +1,7 @@
 package com.Opengov;
 
-import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.PrintWriter;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Timer;
+
 import java.util.concurrent.TimeUnit;
 import org.junit.After;
 import org.junit.Assert;
@@ -68,8 +63,7 @@ public class CareerOpenPositionTest
 				Assert.fail("Search Location mismatch");
 				
 			}
-		   for (i = 0; i < careerspage.searchresult.size(); i++)
-		   {
+		   
 			   try
 			   {
 				   //Asserting the career position title 
@@ -78,10 +72,10 @@ public class CareerOpenPositionTest
 			   {
 				   //Exception Handles when it shows mismatch between actual result 'Redwood City' and expected result
 				   e.printStackTrace();
-				   Assert.fail("Search Location mismatch");
+				   Assert.fail("Job Title is missing");
 				
 			   }
-		   }
+		   
 		}
 	
 	}
